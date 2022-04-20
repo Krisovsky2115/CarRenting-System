@@ -11267,12 +11267,10 @@ textarea.form-control-lg {
 
 /*# sourceMappingURL=bootstrap.css.map */
 
-.search { 
+.rent { 
     background-color: rgba(65, 65, 65, 0.8);
     color: white;
-    margin-top: 5px;
-    margin-left: 10px;
+    margin-top: 15px;
+    margin-left: 15px;
     position: realtive;
-    border-color: white;
-    border-radius: 5px;
 }
