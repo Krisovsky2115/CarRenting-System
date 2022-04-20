@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #2e9045; opacity: var(#2e9045, 45%);">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Navbar</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -22,13 +22,13 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Vehicles</a>
+                <a class="nav-link" href="#">Pojazdy</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Items</a>
+                <a class="nav-link" href="#">Przedmioty</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="#">Kontakt</a>
               </li>
             </ul>
           </div>
@@ -37,63 +37,83 @@
 </body>
 <div id="offer">
   <div class="container-fluid"> 
-  <div id="make-3D-space">
+    <div id="make-3D-space">
       <div id="product-card">
           <div id="product-front">
             <div class="shadow"></div>
-              <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt.png" alt="" />
+              <img src="https://motofilm.pl/wp-content/uploads/2021/07/ABT-Audi-RS7-R.jpg" alt="" />
               <div class="image_overlay"></div>
-              <div id="view_details">View details</div>
+              <div id="view_details" data-bs-toggle="modal" data-bs-target="#infoModal"><i class="fa fa-shopping-cart" aria-hidden="true"></i> wypożycz</div>
               <div class="stats">        	
                   <div class="stats-container">
-                      <span class="product_price">From $500</span>
-                      <span class="product_name">Audi RS-7R</span>    
-                      <p> Luxry Vehicles</p>                                            
-                      
+                      <span class="product_price"> Od $500</span>
+                      <span class="product_name"><i class="fa fa-car" style="color: #2e9045" aria-hidden="true"></i> Audi RS-7R</span>    
+                      <p> Kategoria: Pojazdy</p>                                            
                       <div class="product-options">
-                      <strong>Statistic</strong>
+                      <strong>Statystyki</strong>
                       <span>
-                        Power: 750 KM <br> 
-                        Brand: Audi <br> 
-                        Distance: 0 km <br>
+                        Moc: 750 KM <br> 
+                        Marka: Audi <br> 
+                        Przebieg: 0 km <br>
                       </span>
-                      <strong>Color variants</strong>
-                      <div class="colors">
-                          <div class="c-red"><span></span></div>
-                          <div class="c-white"><span></span></div>
-                      </div>
                   </div>                       
-                  </div>                         
-              </div>
-          </div>
-          <div id="product-back">
-            <div class="shadow"></div>
-              <div id="carousel">
-                  <ul>
-                      <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large.png" alt="" /></li>
-                      <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large2.png" alt="" /></li>
-                      <li><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/245657/t-shirt-large3.png" alt="" /></li>
-                  </ul>
-                  <div class="arrows-perspective">
-                      <div class="carouselPrev">
-                          <div class="y"></div>
-                        <div class="x"></div>
-                      </div>
-                      <div class="carouselNext">
-                          <div class="y"></div>
-                        <div class="x"></div>
-                      </div>
-                  </div>
-              </div>
-              <div id="flip-back">
-                <div id="cy"></div>
-                  <div id="cx"></div>
-              </div>
-          </div>	  
-      </div>	
-  </div>	
-</div> 
+              </div>                         
+            </div>
+        </div>
+    </div>	
+</div>
+  </div>
+  <!-- Second -->
+  </div>
+</div>
+
+<!-- Modal for vehicle -->
+<div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="background-color: rgba(27,27,27,0.7);">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel"> Pojazd: Audi RS7-R</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h4> Dane pojazdu: </h4>
+        <b> Moc: </b> 750 <br> 
+        <b> Przebieg: </b> 0 KM <br> 
+        <b> Maksymalny czas wypozyczenia: </b> 10 days <br> 
+        <b> Cena za 1 dzień: </b> $600 <br> 
+        <br> 
+        Mozesz wypozyczyć ten pojazd!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#transactionModal" >Wypozycz</button>
+      </div>
+    </div>
+  </div>
+</div>
   
+<!-- Modal rent transaction -->
+<div class="modal fade" id="transactionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Wypozyczanie pojazdu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Wypozyczajacy: Dawid Krysman <br> 
+        Wypozyczenie na : 
+        <input type="number" value="10" maxlength="2" /> dni <br>
+        Miejsce postoju: 
+        Ul. Wrzosowskiego 14, Warszawa Mokotów <br> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Zamknij</button>
+        <button type="button" class="btn btn-primary"><i class="fas fa-coins    "></i> Zapłać</button>
+      </div>
+    </div>
+  </div>
+</div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 
     <script>
@@ -107,94 +127,5 @@
 			$(this).removeClass('animate');			
 			$('div.carouselNext, div.carouselPrev').removeClass('visible');
 	});	
-	
-	// Flip card to the back side
-	$('#view_details').click(function(){		
-		$('div.carouselNext, div.carouselPrev').removeClass('visible');
-		$('#product-card').addClass('flip-10');
-		setTimeout(function(){
-			$('#product-card').removeClass('flip-10').addClass('flip90').find('div.shadow').show().fadeTo( 80 , 1, function(){
-				$('#product-front, #product-front div.shadow').hide();			
-			});
-		}, 50);
-		
-		setTimeout(function(){
-			$('#product-card').removeClass('flip90').addClass('flip190');
-			$('#product-back').show().find('div.shadow').show().fadeTo( 90 , 0);
-			setTimeout(function(){				
-				$('#product-card').removeClass('flip190').addClass('flip180').find('div.shadow').hide();						
-				setTimeout(function(){
-					$('#product-card').css('transition', '100ms ease-out');			
-					$('#cx, #cy').addClass('s1');
-					setTimeout(function(){$('#cx, #cy').addClass('s2');}, 100);
-					setTimeout(function(){$('#cx, #cy').addClass('s3');}, 200);				
-					$('div.carouselNext, div.carouselPrev').addClass('visible');				
-				}, 100);
-			}, 100);			
-		}, 150);			
-	});			
-	
-	// Flip card back to the front side
-	$('#flip-back').click(function(){		
-		
-		$('#product-card').removeClass('flip180').addClass('flip190');
-		setTimeout(function(){
-			$('#product-card').removeClass('flip190').addClass('flip90');
-	
-			$('#product-back div.shadow').css('opacity', 0).fadeTo( 100 , 1, function(){
-				$('#product-back, #product-back div.shadow').hide();
-				$('#product-front, #product-front div.shadow').show();
-			});
-		}, 50);
-		
-		setTimeout(function(){
-			$('#product-card').removeClass('flip90').addClass('flip-10');
-			$('#product-front div.shadow').show().fadeTo( 100 , 0);
-			setTimeout(function(){						
-				$('#product-front div.shadow').hide();
-				$('#product-card').removeClass('flip-10').css('transition', '100ms ease-out');		
-				$('#cx, #cy').removeClass('s1 s2 s3');			
-			}, 100);			
-		}, 150);			
-		
-	});	
-
-	
-	/* ----  Image Gallery Carousel   ---- */
-	
-	var carousel = $('#carousel ul');
-	var carouselSlideWidth = 335;
-	var carouselWidth = 0;	
-	var isAnimating = false;
-	
-	// building the width of the casousel
-	$('#carousel li').each(function(){
-		carouselWidth += carouselSlideWidth;
-	});
-	$(carousel).css('width', carouselWidth);
-	
-	// Load Next Image
-	$('div.carouselNext').on('click', function(){
-		var currentLeft = Math.abs(parseInt($(carousel).css("left")));
-		var newLeft = currentLeft + carouselSlideWidth;
-		if(newLeft == carouselWidth || isAnimating === true){return;}
-		$('#carousel ul').css({'left': "-" + newLeft + "px",
-							   "transition": "300ms ease-out"
-							 });
-		isAnimating = true;
-		setTimeout(function(){isAnimating = false;}, 300);			
-	});
-	
-	// Load Previous Image
-	$('div.carouselPrev').on('click', function(){
-		var currentLeft = Math.abs(parseInt($(carousel).css("left")));
-		var newLeft = currentLeft - carouselSlideWidth;
-		if(newLeft < 0  || isAnimating === true){return;}
-		$('#carousel ul').css({'left': "-" + newLeft + "px",
-							   "transition": "300ms ease-out"
-							 });
-	    isAnimating = true;
-		setTimeout(function(){isAnimating = false;}, 300);			
-	});
-});
-    </script>
+})
+</script>
