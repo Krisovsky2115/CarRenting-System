@@ -69,6 +69,10 @@
   }
 }
 
+span+span { 
+  margin-left: 20px;
+}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);
@@ -11262,3 +11266,13 @@ textarea.form-control-lg {
 }
 
 /*# sourceMappingURL=bootstrap.css.map */
+
+.search { 
+    background-color: rgba(65, 65, 65, 0.8);
+    color: white;
+    margin-top: 5px;
+    margin-left: 10px;
+    position: realtive;
+    border-color: white;
+    border-radius: 5px;
+}
